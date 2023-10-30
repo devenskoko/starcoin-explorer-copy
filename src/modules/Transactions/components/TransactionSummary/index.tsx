@@ -76,6 +76,7 @@ class TransactionSummary extends PureComponent<Props> {
     const type = Object.keys(txnPayload)[0];
     return (
       <div className={classNames(classes.root, className)}>
+        <input type="checkbox" className='tuur_checkbox' name="tuur_checkbox" value={source.transaction_hash} />
         {type}&nbsp;
         <CommonLink
           path={`/${getNetwork()}/transactions/detail/${
